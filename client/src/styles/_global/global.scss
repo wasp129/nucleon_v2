@@ -1,0 +1,40 @@
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url("../assets/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url("../assets/fonts/Roboto-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-Light";
+    src: url("../assets/fonts/Roboto-Light.ttf");
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: $font-main-regular;
+	color: $text-color-primary;
+}
+
+a {
+	color: $text-color-secondary;
+	background-color: $bg-color-secondary;
+	text-decoration: none;
+	font-family: $font-main-light;
+	padding: 8px 50px;
+	-webkit-transition: padding 0.3s;
+	transition: padding 0.3s;
+}
+
+a:hover {
+	padding: 11px 53px;
+}
+
+.App {
+	margin: 0;
+	padding: 0;
+}

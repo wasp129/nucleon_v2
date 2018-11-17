@@ -1,0 +1,16 @@
+.wrapper {
+	background-color: $bg-color-primary;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+
+	.blue-dots {
+		width: 960px;
+	    transform: rotate(35deg);
+	    position: absolute;
+	    bottom: 0;
+	    left: 0;
+	}
+}

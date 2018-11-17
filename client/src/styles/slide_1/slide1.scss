@@ -1,0 +1,31 @@
+.container {
+	.welcome-message {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		width: 50vw;
+		margin: 0 auto;
+
+		.logo {
+			.logo_main {
+				width: 50vw;
+			}
+		}
+
+		.welcome-text {
+			width: 29vw;
+    		margin: 0 auto;
+
+    		.highlight {
+    			font-family: $font-main-bold;
+    			margin-bottom: 60px;
+    		}
+		}
+
+		.start-button {
+			border: 1px solid $text-color-primary;
+		}
+	}
+}
