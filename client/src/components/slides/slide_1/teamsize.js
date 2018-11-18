@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import logo_main from "../../../assets/images/logos/nucleon_logo_primary.png"
 import Baseslide from "../baseslide.js";
 
 class Teamsize extends Component {
-	constructor(props) {
-		super(props);
-	}
 	render() {
 		return (
 			<div className="slide-1">
@@ -19,7 +17,7 @@ class Teamsize extends Component {
 								<p>The Nucleon formula measures the effectiveness of any IT organization in three broad areas.</p>
 								<p className="highlight">People, Organization and Complexity.</p>
 							</div>
-							<a className="start-button" href="#">Start</a>
+							<Link className="start-button" to='/page2'>Start</Link>
 						</div>
 					</div>
 				</Baseslide>	

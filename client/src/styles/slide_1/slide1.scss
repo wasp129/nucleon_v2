@@ -8,6 +8,10 @@
 		width: 50vw;
 		margin: 0 auto;
 
+		@media only screen and (max-width: 835px) {
+  			width: 100vw;
+		}
+
 		.logo {
 			.logo_main {
 				width: 50vw;
@@ -15,8 +19,13 @@
 		}
 
 		.welcome-text {
-			width: 29vw;
+			max-width: 29vw;
     		margin: 0 auto;
+
+    		@media only screen and (max-width: 635px) {
+  				max-width: none;
+  				margin: 0;
+			}
 
     		.highlight {
     			font-family: $font-main-bold;
