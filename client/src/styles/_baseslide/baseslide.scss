@@ -13,4 +13,22 @@
 	    bottom: 0;
 	    left: 0;
 	}
+
+	.navbar {
+		position: absolute;
+		bottom: 35px;
+		left: 50%;
+		transform: translateX(-50%);
+
+		.back-button {
+			margin-right: 30px;
+			background-color: transparent;
+			border: 1px solid $text-color-primary;
+			color: white;
+		}
+
+		.next-button {
+			margin-left: 30px;
+		}
+	}
 }

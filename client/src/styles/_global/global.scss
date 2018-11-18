@@ -21,7 +21,7 @@ body {
 	overflow: hidden;
 }
 
-a {
+button {
 	color: $text-color-secondary;
 	background-color: $bg-color-secondary;
 	text-decoration: none;
@@ -29,11 +29,15 @@ a {
 	padding: 8px 50px;
 	-webkit-transition: padding 0.3s;
 	transition: padding 0.3s;
+	font-size: 15px;
+	margin: 0;
+	cursor: pointer;
 }
 
-a:hover {
-	padding: 11px 53px;
-}
+// button:hover {
+// 	padding: 11px 53px;
+// 	cursor: pointer;
+// }
 
 .App {
 	margin: 0;
