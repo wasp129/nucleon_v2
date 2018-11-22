@@ -1,0 +1,50 @@
+.slide-2 {
+	.team-members {
+
+    @media only screen and (max-width: 1005px) {
+  		width: 60vw;
+	}
+
+	@media only screen and (max-width: 570px) {
+  		width: 80vw;
+	}
+
+	@media only screen and (max-width: 420px) {
+  		width: 100vw;
+	}
+
+	    .team-number-text {
+	    	margin-bottom: 20px;
+	    }
+
+	    h2 {
+	    	color: $text-color-tertiary;
+	    }
+
+		p {
+			color: $text-color-tertiary;
+			font-size: 12px;
+			margin: 0 70px;
+		}
+
+	    .team-number {
+	    	display: inline;
+	    	font-size: 15px;
+	    }
+
+	    .increase-members, .decrease-members {
+	    	background-color: $bg-color-primary;
+	    	color: white;
+	    	border-radius: 100%;
+	    	padding: 0;
+	    	width: 50px;
+	    	height: 50px;
+	    	font-size: 18px;
+	    }
+
+	    .scroll-teamsize {
+	    	height: 43%;
+	    }
+	}
+
+}

@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
 import logo_main from "../../../assets/images/logos/nucleon_logo_primary.png"
 import Baseslide from "../baseslide.js";
 
 class Start extends Component {
 
 	handleStartClick = () => {
-    	this.props.history.push("/page2");
+    	this.props.history.push("/teamsize");
 	}
 
 	render() {

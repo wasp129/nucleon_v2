@@ -1,0 +1,65 @@
+.slide-3 {
+    .competence {
+        .teammember-name {
+            margin: 0;
+            color: $text-color-tertiary;
+            text-align: left;
+            font-size: 13px;
+            opacity: 0.4
+        }
+
+        .input-box {
+            width: 90%;
+            height: 60px;
+            margin: 0 auto;
+            margin-bottom: 25px;
+            border: 1px solid rgba(80, 80, 80, 0.2);
+            border-style: none none solid none;
+
+            .input-salary {
+                width: 30%;
+                font-size: 13px;
+                /* margin-left: 20px; */
+                margin-right: 40px;
+                border: none;
+                text-align: center;
+                line-height: 37px;
+            }
+
+            .competence-wrapper {
+                display: inline;
+                margin-left: 40px;
+
+                .input-competence {
+                    width: 20%;
+                    font-size: 13px;
+                    /* margin-left: 20px; */
+                    border: none;
+                    text-align: center;
+                    line-height: 37px;
+                }
+
+                .input-competence:focus {
+                    outline: 0;
+                }
+
+                .competence-button {
+                    background-color: $bg-color-primary;
+                    color: white;
+                    border-radius: 100%;
+                    padding: 0;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            .input-salary:focus {
+                outline: 0;
+            }
+        }
+
+        .scroll-competence {
+            height: 55%;
+        }
+    }
+}

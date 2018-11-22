@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from "../_common/navbar";
 import bluedots from "../../assets/images/blue_dots.png";
+import logo from "../../assets/images/logos/nucleon_logo_90deg.png";
 
 class Baseslide extends Component {
 	render() {
@@ -13,6 +14,7 @@ class Baseslide extends Component {
 
 		return (
 			<div className="wrapper">
+				<img className="logo-fade" src={logo} alt="logo"/>
 				<img className="blue-dots" src={bluedots} alt="blue dots"/>
 				{this.props.children}
 				{navbar}
