@@ -10,10 +10,10 @@ import CompetenceInput from "./competenceInput"
 class Competence extends Component {
 	constructor(props) {
 		super(props);
-
 		this.state = {
 			teamMembers: this.props.teamMembers
 		}
+		console.log(this.props.teamMembers)
 	}
 
 	handleNext = () => {

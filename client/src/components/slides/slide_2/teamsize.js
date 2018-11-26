@@ -11,7 +11,6 @@ import Memberinput from "./memberinput";
 class Teamsize extends Component {
 	constructor(props) {
 		super(props);
-
 		this.state = {
 			teamMembers: this.props.teamMembers
 		}
@@ -22,7 +21,7 @@ class Teamsize extends Component {
 			return;
 		} else {
 			this.setState (prevState => ({
-				teamMembers: [...prevState.teamMembers, new TeamMember ("", "Type Name Here")]
+				teamMembers: [...prevState.teamMembers, new TeamMember ("", "Type name here")]
 			}))
 		}
 	}
@@ -37,17 +36,15 @@ class Teamsize extends Component {
 		}
 	}
 
-	handleNameChange = (e, id) => {
-		let members = this.state.teamMembers;
-		const value = e.target.value;
-		members.reduce((arr, curr) => {
-			if (curr.id === id) {
-				curr.name = value;
+	handleMemberchange = (newMember) => {
+		this.state.teamMembers.map(curr => {
+			if (curr.id === newMember.id) {
+				curr.name = newMember.name;
 			}
-			return [...arr, curr];
-		}, []);
-
+			return curr;
+		})
 	}
+
 
 	handleNext = () => {
 		this.props.sendSlide2Data(this.state.teamMembers);
@@ -73,10 +70,11 @@ class Teamsize extends Component {
 						<button className="increase-members" onClick={this.increaseMemberAmount}>+</button>
 						<div className="scroll-wrap scroll-teamsize">
 							<div className="scrollable">
-								<Memberinput className="input-standard member-input" onNameChange={this.handleNameChange} teamMembers={this.state.teamMembers}/>
+								{this.state.teamMembers.map(teamMember =>
+									<Memberinput key={teamMember.id} className="input-standard member-input" teammember={teamMember} onMemberChange={this.handleMemberchange}/>
+								)}
 							</div>
 						</div>
-						
 					</div>
 				</div>
 			</Baseslide>

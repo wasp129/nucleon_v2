@@ -1,14 +1,27 @@
 import React, { Component } from 'react';
 
 class Memberinput extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			id: this.props.teammember.id,
+			name: this.props.teammember.name,
+			placeholder: this.props.teammember.placeholder
+		}
+	}
+
+	handleNameChange = (e) => {
+		this.setState({
+			name: e.target.value
+		}, this.handleMemberChange)
+	}
+
+	handleMemberChange = () => this.props.onMemberChange(this.state);
+
 	render() {
-		let teamMembers = this.props.teamMembers;
-		let onNameChange = this.props.onNameChange;
 		return (
 			<div>
-				{teamMembers.map(teamMember =>
-					<input className=" input-standard member-input" onChange={e => onNameChange(e, teamMember.id)} key={teamMember.id} placeholder={teamMember.placeholder}></input>
-				)}
+				<input value={this.state.name} placeholder={this.state.placeholder} onChange={this.handleNameChange} className="input-standard member-input" ></input>
 			</div>
 		);
 	}

@@ -7,24 +7,32 @@ class CompetenceInput extends Component {
 			id: this.props.member.id,
 			name: this.props.member.name,
 			competence: this.props.member.competence,
-			salary: this.props.salary
+			salary: this.props.member.salary
 		}
 	}
 
 	handleCompetenceIncrement = () => {
-		this.setState((prevState) => {
-			return {
-				competence: prevState.competence + 1
-			}
-		}, this.handleMemberChange);
+		if (this.state.competence === 10) {
+			return;
+		} else {
+			this.setState((prevState) => {
+				return {
+					competence: prevState.competence + 1
+				}
+			}, this.handleMemberChange);
+		}
 	}
 
 	handleCompetenceDecrement = () => {
-		this.setState((prevState) => {
-			return {
-				competence: prevState.competence - 1
-			}
-		}, this.handleMemberChange);
+		if (this.state.competence === 1) {
+			return;
+		} else {
+			this.setState((prevState) => {
+				return {
+					competence: prevState.competence - 1
+				}
+			}, this.handleMemberChange);
+		}
 	}
 
 	handleManualCompetenceChange = (e) => {
@@ -46,7 +54,7 @@ class CompetenceInput extends Component {
 			<div>
 				<div className="input-box">
 					<p className="teammember-name">{this.state.name}</p>
-					<input className="input-salary" placeholder="Monthly salary (USD)" onChange={this.handleSalaryChange}></input>
+					<input className="input-salary" value={this.state.salary} placeholder="Monthly salary (USD)" onChange={this.handleSalaryChange}></input>
 					<div className="competence-wrapper">
 						<button className="competence-button" onClick={this.handleCompetenceDecrement}>-</button>
 						<input className="input-competence" onChange={this.handleManualCompetenceChange} value={this.state.competence}></input>

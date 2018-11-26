@@ -1,0 +1,18 @@
+.slide-4 {
+	.proximity {
+		.slide-wrapper {
+			margin: 50px 0 0 0;
+
+			.slider-value, .proximity-message {
+				color: $text-color-tertiary;
+				font-size: 13px;
+			}
+
+			.slider-headline {
+				color: $text-color-tertiary;
+				font-size: 13px;
+				opacity: 0.4;
+			}
+		}
+	}
+}

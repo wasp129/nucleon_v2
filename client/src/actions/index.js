@@ -8,4 +8,14 @@ export const sendSlide3Data = (teamMembers) => ({
 	teamMembers
 })
 
+export const sendSlide4Data = (proximity) => ({
+	type: "SEND_SLIDE_4_DATA",
+	proximity
+})
+
+export const sendSlide5Data = (bureaucracy) => ({
+	type: "SEND_SLIDE_5_DATA",
+	bureaucracy
+})
+
 
