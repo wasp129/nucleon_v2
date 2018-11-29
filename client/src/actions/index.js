@@ -18,4 +18,14 @@ export const sendSlide5Data = (bureaucracy) => ({
 	bureaucracy
 })
 
+export const sendSlide6Data = (questions) => ({
+	type: "SEND_SLIDE_6_DATA",
+	questions
+})
+
+export const sendSlide7Data = (questions) => ({
+	type: "SEND_SLIDE_7_DATA",
+	questions
+})
+
 

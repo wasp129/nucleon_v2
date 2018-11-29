@@ -1,0 +1,34 @@
+.slide-7 {
+    .method {
+    	width: 65vw;
+
+        .radio-group {
+            width: 90%;
+            margin: 0 auto 55px;
+
+            .radio-group-statement {
+                color: $text-color-tertiary;
+                font-size: 12px;
+                margin-bottom: 25px;
+            }
+
+            div {
+                text-align: left;
+                width: 95%;
+                margin: 0 auto;
+
+                div {
+                    border-right: 0 !important;
+                    border-top: 0 !important;
+                    border-left: 0 !important;
+
+                    div {
+                        div:nth-child(2) {
+                            display: none !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

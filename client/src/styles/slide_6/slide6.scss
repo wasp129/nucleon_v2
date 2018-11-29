@@ -1,0 +1,55 @@
+.slide-6 {
+    .culture {
+        width: 80vw;
+
+        .scroll-culture {
+            height: 65%;
+            bottom: 40px;
+        }
+
+        .radio-group {
+            width: 90%;
+            margin: 0 auto 55px;
+
+            .radio-group-statement {
+                color: $text-color-tertiary;
+                font-size: 14px;
+                margin-bottom: 25px;
+            }
+
+            div {
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                align-items: center;
+                justify-content: center;
+                padding: 0 10px !important;
+                height: 50px;
+                // font-size: 12px;
+
+                div {
+                    border-right: 0 !important;
+                    border-top: 0 !important;
+                    border-left: 0 !important;
+
+                    div {
+                        div:nth-child(2) {
+                            display: none !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .radio-text {
+        font-size: 12px;
+    }
+
+    .radio-item {
+        display: inline;
+    }
+}

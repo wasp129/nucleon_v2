@@ -24,10 +24,11 @@ class Bureaucracy extends Component {
 
   	handleNext = () => {
   		this.props.sendSlide5Data(this.state.bureaucracy);
+  		this.props.history.push("/culture");
   	}
 
   	handleBack = () => {
-  		console.log(this.props);
+  		this.props.history.push("/proximity");
   	}
 
 	render() {
