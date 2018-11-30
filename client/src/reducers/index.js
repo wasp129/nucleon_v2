@@ -1,5 +1,6 @@
 import TeamMember from "../components/_common/models/teammembers";
 import CultureQuestion from "../components/_common/models/culturequestions";
+import Method from "../components/_common/models/methods";
 
 const initialState = {
 	teamMembers: [
@@ -22,6 +23,11 @@ const initialState = {
 		new CultureQuestion("My team members know how their work affects the end user."),
 		new CultureQuestion("My team members receive feedback about the behaviors they need to change and those they should continue."),
 		new CultureQuestion("My team members are only evalutated on things they themselves can influence.")
+	],
+	methods: [
+		new Method(),
+		new Method(),
+		new Method()
 	]
 }
 
