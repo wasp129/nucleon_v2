@@ -7,5 +7,6 @@ export default class TeamMember {
 		this.placeholder = placeholder;
 		this.competence = 0;
 		this.salary = "";
+		this.months = 0;
 	}
 }

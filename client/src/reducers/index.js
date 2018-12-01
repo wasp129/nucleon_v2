@@ -55,7 +55,19 @@ export default (state = initialState, action) => {
 
         case "SEND_SLIDE_7_DATA":
 		console.log("Slide 7 data sent.")
-        return { ...state, cultureQuestions: action.questions };
+        return { ...state, methods: action.methods };
+
+        case "SEND_SLIDE_8_DATA":
+		console.log("Slide 8 data sent.")
+        return { ...state, methods: action.methods };
+
+        case "SEND_SLIDE_9_DATA":
+		console.log("Slide 9 data sent.")
+        return { ...state, methods: action.methods };
+
+        case "SEND_SLIDE_10_DATA":
+		console.log("Slide 10 data sent.")
+        return { ...state, teamMembers: [...action.teamMembers] };
 
 		default:
 		return state;

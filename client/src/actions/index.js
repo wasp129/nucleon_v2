@@ -23,9 +23,25 @@ export const sendSlide6Data = (questions) => ({
 	questions
 })
 
-export const sendSlide7Data = (questions) => ({
+export const sendSlide7Data = (methods) => ({
 	type: "SEND_SLIDE_7_DATA",
-	questions
+	methods
 })
+
+export const sendSlide8Data = (methods) => ({
+	type: "SEND_SLIDE_8_DATA",
+	methods
+})
+
+export const sendSlide9Data = (methods) => ({
+	type: "SEND_SLIDE_9_DATA",
+	methods
+})
+
+export const sendSlide10Data = (teamMembers) => ({
+	type: "SEND_SLIDE_9_DATA",
+	teamMembers
+})
+
 
 

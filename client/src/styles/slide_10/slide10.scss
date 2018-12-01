@@ -1,0 +1,60 @@
+ .slide-10 {
+    .months {
+        .teammember-name {
+            margin: 0;
+            color: $text-color-tertiary;
+            text-align: left;
+            font-size: 13px;
+            opacity: 0.4
+        }
+
+        .input-box {
+            width: 90%;
+		    height: 50px;
+		    margin: 0 auto;
+		    margin-bottom: 25px;
+		    border: 1px solid rgba(80, 80, 80, 0.2);
+		    border-style: none none solid none;
+
+            .months-wrapper {
+                display: inline;
+
+                .input-months {
+                    width: 30%;
+                    font-size: 13px;
+                    /* margin-left: 20px; */
+                    border: none;
+                    text-align: center;
+                    line-height: 20px;
+                }
+
+                .input-months:focus {
+                    outline: 0;
+                }
+
+                .months-button {
+                    background-color: $bg-color-primary;
+                    color: white;
+                    border-radius: 100%;
+                    padding: 0;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+
+        .scroll-months {
+            height: 65%;
+
+	        .month-instructions {
+			    color: $text-color-tertiary;
+			    text-align: left;
+			    font-size: 12px;
+			    opacity: 0.4;
+			    margin-bottom: 50px;
+			    text-align: center;
+			}   
+
+        }
+    }
+}

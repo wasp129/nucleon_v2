@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import {sendSlide8Data} from "../../../actions"
+
 import { RadioGroup, RadioButton } from 'react-radio-buttons';
 
 import Baseslide from "../baseslide.js";
 
 
-class Method extends Component {
+class MethodReleaseProcess extends Component {
 	constructor(props) {
 		super(props)
 
@@ -15,18 +17,22 @@ class Method extends Component {
 		}
 	}
 
+	componentDidMount() {
+		console.log(this.props);
+	}
+
   	handleNext = () => {
-  		
+  		this.props.sendSlide8Data(this.state.methodStatements);
+  		this.props.history.push("/method/qualityassurance");
   	}
 
   	handleBack = () => {
-  		this.props.history.push("/culture");
+  		this.props.history.push("/method/userinvolvement");
   	}
 
+
   	handleSelect = (value, questionId) => {
-  		// console.log(value, questionId);
         this.state.methodStatements.map(item => {
-        	console.log(item)
             if (item.id === questionId) {
                 item.answer = value;
             }
@@ -41,27 +47,27 @@ class Method extends Component {
 					<div className="slide-7">
 						<div className="slide-box-main method">
 							<div className="instructions">
-								<h2>Method 1/3</h2>
+								<h2>Method - Release process</h2>
 								<p>In this section we would like to assess the agility of your team on a scale from 1-5. In doing so, we can estimate the extent to which the team benefits from agile development. For each of the categories below, please select the statement most applicable for your team.</p>
 							</div>
 							<div>
 								<div className="radio-group">
 									<p className="radio-group-statement"></p>
-									<RadioGroup onChange={value => this.handleSelect(value, this.state.methodStatements[0].id)} vertical="true">
+									<RadioGroup onChange={value => this.handleSelect(value, this.state.methodStatements[1].id)} vertical="true">
 										<RadioButton pointColor="#5c85f1" value="1">
-											1) Requirements are handed over as formal requirement specifications from someone outside the team.
+											1) Team has no release process.
 										</RadioButton>
 										<RadioButton pointColor="#5c85f1" value="2">
-											2) Requirements are continuously prioritized in a steering committee or similar overseer.
+											2) Team is delivering at the end of a project.
 										</RadioButton>
 										<RadioButton pointColor="#5c85f1" value="3">
-											3) Team has a dedicated product owner proxy.
+											3) Team has incremental releases internally and involves users sporadically.
 										</RadioButton>
 										<RadioButton pointColor="#5c85f1" value="4">
-											4) Team has a dedicated product owner with extensive user/business understanding.
+											4) Team delivers batches of functionality to the users in cycles e.g. monthly.
 										</RadioButton>
 										<RadioButton pointColor="#5c85f1" value="5">
-											5) Team and product owner get direct and continuous feedback from users on features via AB-testing or other measurable uses/feedback.
+											5) Team delivers by themselves a few features to users frequently e.g. daily.
 										</RadioButton>
 									</RadioGroup>
 								</div>
@@ -84,6 +90,6 @@ const mapStateToProps = (state) => {
 	}
 };
 
-// const mapDispatchToProps = {sendSlide6Data};
+const mapDispatchToProps = {sendSlide8Data};
 
-export default connect(mapStateToProps)(Method);
+export default connect(mapStateToProps, mapDispatchToProps)(MethodReleaseProcess);

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import {sendSlide3Data} from "../../../actions"
+import {sendSlide3Data} from "../../../actions";
 
 import Baseslide from "../baseslide.js";
-import CompetenceInput from "./competenceInput"
+import CompetenceInput from "./competenceInput";
 
 
 class Competence extends Component {

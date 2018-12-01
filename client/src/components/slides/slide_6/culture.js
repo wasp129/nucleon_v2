@@ -16,7 +16,7 @@ class Culture extends Component {
 
   	handleNext = () => {
   		this.props.sendSlide6Data(this.state.cultureQuestions);
-  		this.props.history.push("/method");
+  		this.props.history.push("/method/userinvolvement");
   	}
 
   	handleBack = () => {
