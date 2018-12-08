@@ -16,6 +16,8 @@ import Legacy from "./components/slides/slide_11/legacy";
 import Architecture from "./components/slides/slide_12/architecture";
 import Reusability from "./components/slides/slide_13/reusability";
 import Futureproofing from "./components/slides/slide_14/futureproofing";
+import Signup from "./components/authentication/signup";
+import Login from "./components/authentication/login";
 
 import store from "./store/index";
 
@@ -40,7 +42,9 @@ class App extends Component {
                 <Route exact path="/legacy" component={Legacy}/>
                 <Route exact path="/architecture" component={Architecture}/>
                 <Route exact path="/reusability" component={Reusability}/>
-            	<Route exact path="/futureproofing" component={Futureproofing}/>
+                <Route exact path="/futureproofing" component={Futureproofing}/>
+                <Route exact path="/signup" component={Signup}/>
+            	<Route exact path="/login" component={Login}/>
         	</Switch>
         </div>
       </Provider>
