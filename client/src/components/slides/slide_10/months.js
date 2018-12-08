@@ -15,9 +15,8 @@ class MethodMonths extends Component {
 	}
 
 	handleNext = () => {
-		// this.props.history.push("/")
 		this.props.sendSlide10Data(this.state.teamMembers);
-		console.log(this.props);
+		this.props.history.push("/legacy")
 	}
 
 	handleBack = () => {

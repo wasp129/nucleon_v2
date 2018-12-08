@@ -28,46 +28,72 @@ const initialState = {
 		new Method(),
 		new Method(),
 		new Method()
-	]
+	],
+
+	legacy: {
+        historicReasons: 0,
+        effort: 0,
+        graveyard: null
+    },
+
+    architecture: 0,
+    reusability: 0,
+    futureProofing: 0
 }
 
 export default (state = initialState, action) => {
 	switch(action.type) {
 		case "SEND_SLIDE_2_DATA":
-		console.log("Slide 2 data sent.");
-		return { ...state, teamMembers: [...action.teamMembers] }
+			console.log("Slide 2 data sent.");
+			return { ...state, teamMembers: [...action.teamMembers] }
 
 		case "SEND_SLIDE_3_DATA":
-		console.log("Slide 3 data sent.");
-		return { ...state, teamMembers: [...action.teamMembers] }
+			console.log("Slide 3 data sent.");
+			return { ...state, teamMembers: [...action.teamMembers] }
 
 		case "SEND_SLIDE_4_DATA":
-		console.log("Slide 4 data sent.");
-		return { ...state, proximity: action.proximity };
+			console.log("Slide 4 data sent.");
+			return { ...state, proximity: action.proximity };
 
 		case "SEND_SLIDE_5_DATA":
-		console.log("Slide 5 data sent.");
-		return { ...state, bureaucracy: action.bureaucracy };
+			console.log("Slide 5 data sent.");
+			return { ...state, bureaucracy: action.bureaucracy };
 
 		case "SEND_SLIDE_6_DATA":
-		console.log("Slide 6 data sent.")
-        return { ...state, cultureQuestions: action.questions };
+			console.log("Slide 6 data sent.")
+        	return { ...state, cultureQuestions: action.questions };
 
         case "SEND_SLIDE_7_DATA":
-		console.log("Slide 7 data sent.")
-        return { ...state, methods: action.methods };
+			console.log("Slide 7 data sent.")
+        	return { ...state, methods: action.methods };
 
         case "SEND_SLIDE_8_DATA":
-		console.log("Slide 8 data sent.")
-        return { ...state, methods: action.methods };
+			console.log("Slide 8 data sent.")
+        	return { ...state, methods: action.methods };
 
         case "SEND_SLIDE_9_DATA":
-		console.log("Slide 9 data sent.")
-        return { ...state, methods: action.methods };
+			console.log("Slide 9 data sent.")
+        	return { ...state, methods: action.methods };
 
         case "SEND_SLIDE_10_DATA":
-		console.log("Slide 10 data sent.")
-        return { ...state, teamMembers: [...action.teamMembers] };
+			console.log("Slide 10 data sent.")
+        	return { ...state, teamMembers: [...action.teamMembers] };
+
+        case "SEND_SLIDE_11_DATA":
+			console.log("Slide 11 data sent.")
+        	return { ...state, legacy: { ...action.legacy } };
+
+        case "SEND_SLIDE_12_DATA":
+        	console.log("Slide 12 data sent.")
+            return { ...state, architecture: action.architecture };
+
+        case "SEND_SLIDE_13_DATA":
+        	console.log("Slide 13 data sent.")
+            return { ...state, reusability: action.reusability };
+
+        case "SEND_SLIDE_14_DATA":
+        	console.log("Slide 14 data sent.")
+            return { ...state, futureProofing: action.futureProofing };    		
 
 		default:
 		return state;

@@ -39,8 +39,28 @@ export const sendSlide9Data = (methods) => ({
 })
 
 export const sendSlide10Data = (teamMembers) => ({
-	type: "SEND_SLIDE_9_DATA",
+	type: "SEND_SLIDE_10_DATA",
 	teamMembers
+})
+
+export const sendSlide11Data = (legacy) => ({
+    type: "SEND_SLIDE_11_DATA",
+    legacy
+})
+
+export const sendSlide12Data = (architecture) => ({
+    type: "SEND_SLIDE_12_DATA",
+    architecture
+})
+
+export const sendSlide13Data = (reusability) => ({
+    type: "SEND_SLIDE_13_DATA",
+    reusability
+})
+
+export const sendSlide14Data = (futureProofing) => ({
+    type: "SEND_SLIDE_14_DATA",
+    futureProofing
 })
 
 

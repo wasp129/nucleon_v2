@@ -1,0 +1,18 @@
+.slide-12 {
+	.architecture {
+		.slide-wrapper {
+			margin: 50px 0 0 0;
+
+			.slider-value, .architecture-message {
+				color: $text-color-tertiary;
+				font-size: 13px;
+			}
+
+			.slider-headline {
+				color: $text-color-tertiary;
+				font-size: 13px;
+				opacity: 0.4;
+			}
+		}
+	}
+}
