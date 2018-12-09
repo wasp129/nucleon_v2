@@ -29,7 +29,9 @@ class App extends Component {
       <Provider store={store}>
         <div className="App">
         	<Switch>
-            	<Route exact path="/" component={Start}/>
+                <Route exact path="/" component={Login}/>
+                <Route exact path="/signup" component={Signup}/>
+            	<Route exact path="/start" component={Start}/>
             	<Route exact path="/teamsize" component={Teamsize}/>
                 <Route exact path="/competence" component={Competence}/>
                 <Route exact path="/proximity" component={Proximity}/>
@@ -43,8 +45,6 @@ class App extends Component {
                 <Route exact path="/architecture" component={Architecture}/>
                 <Route exact path="/reusability" component={Reusability}/>
                 <Route exact path="/futureproofing" component={Futureproofing}/>
-                <Route exact path="/signup" component={Signup}/>
-            	<Route exact path="/login" component={Login}/>
         	</Switch>
         </div>
       </Provider>

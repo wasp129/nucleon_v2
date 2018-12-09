@@ -15,7 +15,7 @@ passport.deserializeUser((id, done) => {
 	console.log('DeserializeUser called')
 	User.findOne(
 		{ _id: id },
-		'email',
+		'email name',
 		(err, user) => {
 			console.log('*** Deserialize user, user:')
 			console.log(user)

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Navbar from "../_common/navbar";
+import Topmenu from "../_common/topmenu";
 import bluedots from "../../assets/images/blue_dots.png";
 import logo from "../../assets/images/logos/nucleon_logo_90deg.png";
-
+import {withRouter} from 'react-router-dom';
 import axios from 'axios';
 
 class Baseslide extends Component {
@@ -10,33 +11,36 @@ class Baseslide extends Component {
 		super()
 	    this.state = {
 	      loggedIn: false,
-	      email: null
+	      name: null
 	    }
 	}
 
-	componentDidMount() {
-    	this.getUser()
+	componentWillMount() {
+    	this.getUser();
 	}
 
-	updateUser (userObject) {
+	updateUser = (userObject) => {
 		this.setState(userObject)
 	}
 
-	getUser() {
+	getUser = () => {
 	    axios.get('/user/').then(response => {
-	      	console.log(response.data)
 	    	if (response.data.user) {
-	      	console.log('Get User: There is a user saved in the server session: ')
 	        this.setState({
 	          loggedIn: true,
-	          email: response.data.user.email
+	          name: response.data.user.name
 	        })
+	        if (window.location.pathname === "/") {
+	        	this.props.history.push("/start");
+	        }
 	      } else {
-	        console.log('Get user: no user');
 	        this.setState({
 	          loggedIn: false,
-	          email: null
+	          name: null
 	        })
+	        if (window.location.pathname !== "/" && window.location.pathname !== "/signup") {
+	        	this.props.history.push("/");
+	        }
 	      }
 	    })
   	}
@@ -44,17 +48,19 @@ class Baseslide extends Component {
 	render() {
 		const pathname = window.location.pathname;
 		let navbar;
+		let topmenu;
 
-		if (pathname !== "/") {
-			navbar = <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} handleNext={this.props.handleNext} handleBack={this.props.handleBack}/>
+		if (pathname !== "/start" && pathname !== "/" && pathname !== "/signup") {
+			navbar = <Navbar handleNext={this.props.handleNext} handleBack={this.props.handleBack}/>
 		}
 
 		if (this.state.loggedIn) {
-			console.log("WELCOME" + this.state.email);
+			topmenu = <Topmenu loggedIn={this.state.loggedIn} user={this.state.name} updateUser={this.updateUser} handleLogout={this.props.handleLogout}/>
 		}
 
 		return (
 			<div className="wrapper">
+				{topmenu}
 				<img className="logo-fade" src={logo} alt="logo"/>
 				<img className="blue-dots" src={bluedots} alt="blue dots"/>
 				{this.props.children}
@@ -64,4 +70,4 @@ class Baseslide extends Component {
 	}
 }
 
-export default Baseslide;
+export default withRouter(Baseslide);

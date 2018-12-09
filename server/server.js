@@ -15,7 +15,7 @@ var dotenv = require("dotenv").config();
 var user = require("./routes/user");
 var session = require('express-session')
 var MongoStore = require('connect-mongo')(session)
-var passport = require('passport');
+var passport = require('./passport');
 
 var app = express();
 
@@ -44,6 +44,7 @@ mongoose.connect(db, { useNewUrlParser: true }, function (err) {
 app.use(
 	session({
 		secret: 'gallant-fox',
+		store: new MongoStore({ mongooseConnection: mongoose.connection }),
 		resave: false, //required
 		saveUninitialized: false //required
 	})

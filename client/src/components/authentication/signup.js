@@ -15,6 +15,14 @@ class Signup extends Component {
 		}
 	}
 
+	componentWillMount() {
+    	axios.get('/user/').then(response => {
+	    	if (response.data.user) {
+	      		this.props.history.push("/start");
+	      	} 
+	    })
+	}
+
 	handleSubmit = (event) => {
 		console.log('sign-up handleSubmit, email: ')
 		console.log(this.state.email)
