@@ -1,0 +1,45 @@
+.login {
+    .login-box {
+        left: -100%;
+        top: 0;
+        height: 100vh;
+        transform: none;
+        width: 40vw;
+
+        .login-label {
+            margin: 0;
+            color: $text-color-tertiary;
+            text-align: left;
+            font-size: 13px;
+            opacity: 0.4;
+            margin-left: 20px;
+        }
+
+        .input-standard {
+            height: 30px;
+            margin-bottom: 30px;
+        }
+
+        .input-standard:focus {
+            border: 1px solid $bg-color-primary;
+            border-style: none none solid none;
+        }
+
+        button {
+            color: $text-color-primary;
+            background-color: $bg-color-primary;
+        }
+
+        p {
+            margin-top: 40px;
+            font-size: 13px;
+            color: $text-color-tertiary;
+        }
+
+        .login-optout {
+            color: $bg-color-primary;
+            border-bottom: 1px solid $bg-color-primary;
+            cursor: pointer;
+        }
+    }
+}

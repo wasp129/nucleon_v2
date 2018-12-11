@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import arrow from "../../assets/images/icons/down-arrow.png";
 import { withRouter } from 'react-router-dom';
 
 class Topmenu extends Component {
@@ -23,7 +24,7 @@ class Topmenu extends Component {
     render() {
         return (
             <div className="topmenu">
-                <p className="user-logged-in">{this.props.user}</p>
+                <p className="user-logged-in">{this.props.user}<span><img className="arrow" src={arrow} alt={this.props.user}/></span></p>
                 <button onClick={this.logout}>Log out</button>
             </div>
         );

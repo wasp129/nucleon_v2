@@ -17,7 +17,6 @@ import Architecture from "./components/slides/slide_12/architecture";
 import Reusability from "./components/slides/slide_13/reusability";
 import Futureproofing from "./components/slides/slide_14/futureproofing";
 import Signup from "./components/authentication/signup";
-import Login from "./components/authentication/login";
 
 import store from "./store/index";
 
@@ -29,7 +28,7 @@ class App extends Component {
       <Provider store={store}>
         <div className="App">
         	<Switch>
-                <Route exact path="/" component={Login}/>
+                <Route exact path="/" component={Signup}/>
                 <Route exact path="/signup" component={Signup}/>
             	<Route exact path="/start" component={Start}/>
             	<Route exact path="/teamsize" component={Teamsize}/>

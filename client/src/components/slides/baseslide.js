@@ -60,10 +60,10 @@ class Baseslide extends Component {
 
 		return (
 			<div className="wrapper">
-				{topmenu}
 				<img className="logo-fade" src={logo} alt="logo"/>
 				<img className="blue-dots" src={bluedots} alt="blue dots"/>
 				{this.props.children}
+				{topmenu}
 				{navbar}
 			</div>
 		);

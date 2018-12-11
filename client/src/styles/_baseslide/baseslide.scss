@@ -6,6 +6,30 @@
 	margin: 0;
 	padding: 0;
 
+	.topmenu {
+		.user-logged-in {
+			display: block;
+			margin: 0;
+			width: 140px;
+			position: absolute;
+			right: 20px;
+			top: 10px;
+			cursor: pointer;
+
+			span {
+				position: absolute;
+			    right: 0;
+			    top: 67%;
+			    transform: translateY(-50%);
+			}
+
+			.arrow {
+				width: 16px;
+
+			}
+		}
+	}
+
 	.logo-fade {
 		position: absolute;
 		right: 0;

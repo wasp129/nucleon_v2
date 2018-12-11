@@ -1,3 +1,113 @@
-.signup {
-	color: black;
+.signup-wrapper {
+    background-color: $bg-color-primary;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+    .signup {
+        .signup-info {
+            width: 60vw;
+            height: 100vh;
+            position: absolute;
+            right: 0;
+            text-align: center;
+
+            .signup-info-inner {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+
+                .logo-primary {
+                    width: 45%;
+                    display: block;
+                    margin: 0 auto 70px;
+                }
+
+                p {
+                    margin: 0 50px 160px 50px;
+                }
+
+                .signup-info-button {
+                    margin: 0 10px 0 10px;
+                }
+            }
+
+            .logo-secondary {
+                position: absolute;
+                width: 35%;
+                opacity: 0.5;
+                bottom: 30px;
+                right: 30px;
+            }
+        }
+
+        .signup-box {
+            left: 0;
+            top: 0;
+            height: 100vh;
+            transform: none;
+            width: 40vw;
+
+            .country-select {
+                height: 30px;
+                width: 75%;
+                margin: 10px 0 30px 0;
+                -webkit-appearance: none;
+                -webkit-border-radius: 0px;
+                border: 1px solid rgba(80, 80, 80, 0.2);
+                border-style: none none solid none;
+                background-color: $bg-color-secondary;
+                font-size: 13px;
+            }
+
+            .country-select:focus {
+                outline: 0;
+            }
+
+            .input-standard {
+                height: 30px;
+                margin-bottom: 30px;
+            }
+
+            .input-standard:focus {
+                border: 1px solid $bg-color-primary;
+                border-style: none none solid none;
+            }
+
+            .signup-label {
+                margin: 0;
+                color: $text-color-tertiary;
+                text-align: left;
+                font-size: 13px;
+                opacity: 0.4;
+                margin-left: 20px;
+            }
+
+            button {
+                color: $text-color-primary;
+                background-color: $bg-color-primary;
+            }
+
+            .go-to-login {
+                margin: 0;
+                color: $text-color-tertiary;
+                text-align: left;
+                font-size: 13px;
+                // opacity: 0.4;
+                margin-left: 20px;
+                text-align: center;
+            }
+
+            .login-optout {
+                color: $bg-color-primary;
+                border-bottom: 1px solid $bg-color-primary;
+                cursor: pointer;
+            }
+        }
+    }
+
 }
