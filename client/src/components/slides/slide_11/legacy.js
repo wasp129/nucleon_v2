@@ -95,6 +95,7 @@ class Legacy extends Component {
 const mapStateToProps = (state) => {
 	return {
 		teamMembers: state.teamMembers,
+		name: state.name,
 		proximity: state.proximity,
 		bureaucracy: state.bureaucracy,
 		cultureQuestions: state.cultureQuestions,

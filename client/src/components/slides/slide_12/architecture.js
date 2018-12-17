@@ -97,6 +97,7 @@ class Architecture extends Component {
 
 const mapStateToProps = (state) => {
 	return {
+		name: state.name,
 		teamMembers: state.teamMembers,
 		proximity: state.proximity,
 		bureaucracy: state.bureaucracy,

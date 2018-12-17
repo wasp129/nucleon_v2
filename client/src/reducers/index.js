@@ -3,6 +3,8 @@ import CultureQuestion from "../components/_common/models/culturequestions";
 import Method from "../components/_common/models/methods";
 
 const initialState = {
+	name: "",
+
 	teamMembers: [
 		new TeamMember("", "Type name here"),
 		new TeamMember("", "Type name here"),
@@ -43,6 +45,10 @@ const initialState = {
 
 export default (state = initialState, action) => {
 	switch(action.type) {
+		case "SEND_SLIDE_1_DATA":
+			console.log("Slide 1 data sent.");
+			return { ...state, name: action.name }
+
 		case "SEND_SLIDE_2_DATA":
 			console.log("Slide 2 data sent.");
 			return { ...state, teamMembers: [...action.teamMembers] }

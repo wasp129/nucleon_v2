@@ -82,6 +82,7 @@ const mapStateToProps = (state) => {
 		proximity: state.proximity,
 		bureaucracy: state.bureaucracy,
 		cultureQuestions: state.cultureQuestions,
+		name: state.name,
 		methods: state.methods
 	}
 };

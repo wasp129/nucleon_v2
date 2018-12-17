@@ -63,7 +63,8 @@ const mapStateToProps = (state) => {
 		bureaucracy: state.bureaucracy,
 		cultureQuestions: state.cultureQuestions,
 		methods: state.methods,
-		months: state.months,
+		name: state.name,
+		months: state.months
 	}
 };
 

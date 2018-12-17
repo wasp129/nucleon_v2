@@ -60,7 +60,8 @@ class Competence extends Component {
 
 const mapStateToProps = (state) => {
 	return {
-		teamMembers: state.teamMembers
+		teamMembers: state.teamMembers,
+		name: state.name
 	}
 };
 

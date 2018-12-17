@@ -65,6 +65,7 @@ const mapStateToProps = (state) => {
 		teamMembers: state.teamMembers,
 		proximity: state.proximity,
 		bureaucracy: state.bureaucracy,
+		name: state.name,
 		cultureQuestions: state.cultureQuestions
 	}
 };

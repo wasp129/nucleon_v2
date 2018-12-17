@@ -1,7 +1,8 @@
-const express = require('express')
-const router = express.Router()
-const User = require('../models/user')
-const passport = require('../passport')
+const express = require('express');
+const router = express.Router();
+const User = require('../models/user');
+const passport = require('../passport');
+var mongoose = require("mongoose");
 
 router.post('/signup', (req, res) => {
     console.log('user signup');
@@ -19,6 +20,7 @@ router.post('/signup', (req, res) => {
         }
         else {
             const newUser = new User({
+                _id: new mongoose.Types.ObjectId(),
                 name: name,
                 company: company,
                 country: country,

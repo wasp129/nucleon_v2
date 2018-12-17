@@ -7,6 +7,7 @@ var mongoose = require("mongoose");
 var path = require('path');
 var dotenv = require("dotenv").config();
 var user = require("./routes/user");
+var assessment = require("./routes/assessment");
 var session = require('express-session')
 var MongoStore = require('connect-mongo')(session)
 var passport = require('./passport');
@@ -45,7 +46,8 @@ app.use(passport.initialize())
 app.use(passport.session()) 
 
 // ====ROUTES==== 	
-app.use('/user', user)		
+app.use('/user', user);		
+app.use('/assessment', assessment);		
 
 
 app.listen(port);

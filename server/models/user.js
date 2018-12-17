@@ -1,11 +1,11 @@
 const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+const Schema = mongoose.Schema;
 const bcrypt = require('bcryptjs');
-mongoose.promise = Promise
+mongoose.promise = Promise;
 
 // Define userSchema
 const userSchema = new Schema({
-	
+	_id: Schema.Types.ObjectId,
 	name: { type: String, unique: false, required: true },
 	company: { type: String, unique: false, required: true },
 	country: { type: String, unique: false, required: true },
@@ -37,5 +37,5 @@ userSchema.pre('save', function (next) {
 	}
 })
 
-const User = mongoose.model('User', userSchema)
-module.exports = User
+const User = mongoose.model('User', userSchema);
+module.exports = User;

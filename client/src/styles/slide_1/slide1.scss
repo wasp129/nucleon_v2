@@ -14,23 +14,30 @@
 
 		.logo {
 			.logo_main {
-				width: 50vw;
+				width: 25vw;
 			}
 		}
 
 		.welcome-text {
-			max-width: 29vw;
     		margin: 0 auto;
 
-    		@media only screen and (max-width: 635px) {
-  				max-width: none;
-  				margin: 0;
-			}
 
     		.highlight {
     			font-family: $font-main-bold;
     			margin-bottom: 60px;
     		}
+		}
+
+		.name-input {
+			display: block;
+			width: 100%;
+			background-color: transparent;
+			border: 1px solid rgba(255, 255, 255, 1);
+    		border-style: none none solid none;
+    		font-size: 17px;
+    		color: white;
+    		text-align: center;
+    		margin: 50px 0 50px;
 		}
 
 		.start-button {

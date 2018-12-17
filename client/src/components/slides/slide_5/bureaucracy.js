@@ -58,6 +58,7 @@ const mapStateToProps = (state) => {
 	return {
 		teamMembers: state.teamMembers,
 		proximity: state.proximity,
+		name: state.name,
 		bureaucracy: state.bureaucracy
 	}
 };

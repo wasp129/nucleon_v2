@@ -1,3 +1,8 @@
+export const sendSlide1Data = (name) => ({
+	type: "SEND_SLIDE_1_DATA",
+	name
+})
+
 export const sendSlide2Data = (teamMembers) => ({
 	type: "SEND_SLIDE_2_DATA",
 	teamMembers

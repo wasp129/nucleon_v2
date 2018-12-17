@@ -79,7 +79,8 @@ class Proximity extends Component {
 const mapStateToProps = (state) => {
 	return {
 		teamMembers: state.teamMembers,
-		proximity: state.proximity
+		proximity: state.proximity,
+		name: state.name
 	}
 };
 

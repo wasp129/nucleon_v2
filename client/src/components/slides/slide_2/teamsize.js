@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import TeamMember from "../../_common/models/teammembers";
 
-import {sendSlide2Data} from "../../../actions"
+import {sendSlide2Data} from "../../../actions";
 
 import Baseslide from "../baseslide.js";
 import Memberinput from "./memberinput";
@@ -84,7 +84,8 @@ class Teamsize extends Component {
 
 const mapStateToProps = (state) => {
 	return {
-		teamMembers: state.teamMembers
+		teamMembers: state.teamMembers,
+		name: state.name
 	}
 };
 

@@ -50,7 +50,7 @@ class Baseslide extends Component {
 		let navbar;
 		let topmenu;
 
-		if (pathname !== "/start" && pathname !== "/" && pathname !== "/signup") {
+		if (pathname !== "/start" && pathname !== "/" && pathname !== "/signup" && pathname !== "/dashboard") {
 			navbar = <Navbar handleNext={this.props.handleNext} handleBack={this.props.handleBack}/>
 		}
 
