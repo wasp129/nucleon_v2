@@ -1,132 +1,152 @@
 .dashboard {
-	color: black;
-	height: 100vh;
-	width: 100vw;
-	background-color: $bg-color-primary;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
+    color: black;
+    height: 100vh;
+    width: 100vw;
+    background-color: $bg-color-primary;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 
-	.menu-left {
-		background-color: $bg-color-secondary;
-		width: 20vw;
-		height: 100vh;
-		position: absolute;
-		box-shadow: 10px 0px 5px -2px rgba(0, 0, 0, 0.1);
-		overflow: hidden;
+    .menu-left {
+        background-color: $bg-color-secondary;
+        width: 20vw;
+        height: 100vh;
+        position: absolute;
+        box-shadow: 10px 0px 5px -2px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
 
-		.logo-box {
-			position: relative;
-		    width: 100%;
-		    top: 0;
-		    height: 100px;
-			box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+        .logo-box {
+            position: relative;
+            width: 100%;
+            top: 0;
+            height: 100px;
+            box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
 
-			.logo {
-				width: 165px;
-				display: block;
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-			}
-		}
+            .logo {
+                width: 165px;
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
 
-		.menu-items {
-			width: 100%;
+        .menu-items {
+            width: 100%;
 
-			ul {
-				width: 100%;
-				list-style: none;
-				color: $text-color-tertiary;
-				font-size: 14px;
-				padding: 0;
-				margin: 0;
+            ul {
+                width: 100%;
+                list-style: none;
+                color: $text-color-tertiary;
+                font-size: 14px;
+                padding: 0;
+                margin: 0;
 
-				li {
-					cursor: pointer;
-					padding: 25px 0 25px 20px;
-					border-bottom: 1px solid $text-color-tertiary;
-					opacity: 0.4;
-				}
+                li {
+                    cursor: pointer;
+                    padding: 25px 0 25px 20px;
+                    border-bottom: 1px solid $text-color-tertiary;
+                    opacity: 0.4;
+                }
 
-				li:hover {
-					text-decoration: underline;
-					color: $bg-color-secondary;
-					background-color: $bg-color-primary;
-					opacity: 1;
-				}
-			}
-		}
+                li:hover {
+                    text-decoration: underline;
+                    color: $bg-color-secondary;
+                    background-color: $bg-color-primary;
+                    opacity: 1;
+                }
+            }
+        }
 
-		.menu-item-logout {
-			position: absolute;
-			bottom: 0;
-			border-top: 1px solid $text-color-tertiary;
-		}
-	}
+        .menu-item-logout {
+            position: absolute;
+            bottom: 0;
+            border-top: 1px solid $text-color-tertiary;
+        }
+    }
 
-	.dashboard-content {
-		width: 80vw;
-	    position: absolute;
-	    top: 0;
-	    right: 0;
+    .dashboard-content {
+        width: 80vw;
+        position: absolute;
+        top: 0;
+        right: 0;
 
-	    .headline {
-	    	color: $bg-color-secondary;
-	    	text-align: center;
-	    	margin-top: 70px;
-	    }
+        .headline {
+            color: $bg-color-secondary;
+            text-align: center;
+            margin-top: 70px;
 
-	    .assessment-wrapper {
-	    	margin-top: 55px;
+            h3 {
+                font-family: $font-main-light;
+            }
+        }
 
-	    	.assessment {
-		    	width: 80%;
-		    	height: 100px;
-		    	margin: 25px auto;
-		    	background-color: $bg-color-secondary;
-		    	position: relative;
-		    	box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+        .assessment-wrapper {
+            margin-top: 20px;
 
-		    	.assessment-content {
-		    		position: absolute;
-		    		top: 50%;
-		    		left: 20px;
-		    		transform: translateY(-50%);
+            .dashboard-scroll {
+                height: 68vh;
+                overflow: hidden;
+                overflow-y: scroll;
+            }
 
-		    		p {
-		    			color: $text-color-tertiary;
-		    			opacity: 0.4;
-		    			font-size: 18px;
-		    		}
-		    	}
+            .assessment {
+                width: 80%;
+                height: 100px;
+                margin: 25px auto;
+                background-color: $bg-color-secondary;
+                position: relative;
+                box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
 
-		    	.actions {
-		    			position: absolute;
-		    			top: 50%;
-		    			transform: translateY(-50%);
-		    			right: 20px;
+                .pdf-wrapper {
+                        position: absolute;
+                        z-index: -99999;
+                    }
 
-		    		.action-icon {
-			    		height: 25px;
-			    		margin: 10px;
-			    		cursor: pointer;
-		    		}
-		    	}
-	    	}
+                .assessment-content {
+                    position: absolute;
+                    top: 50%;
+                    left: 20px;
+                    transform: translateY(-50%);
 
-	    	.assessment:hover {
-	    		p {
-	    			opacity: 1;
-	    		}
-	    	}
-	    }
-	}
+                    p {
+                        color: $text-color-tertiary;
+                        font-family: $font-main-light;
+                        opacity: 0.4;
+                        font-size: 18px;
+                    }
+                }
+
+                .actions {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 20px;
+
+                    .action-icon {
+                        height: 25px;
+                        margin: 10px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .assessment:hover {
+                p {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .new-assessment-button {
+            display: block;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: transparent;
+            border: 1px solid $bg-color-secondary;
+            color: $bg-color-secondary;
+        }
+    }
 }
-
-
-
-
-
-

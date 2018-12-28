@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import Baseslide from "../slides/baseslide";
+import {withRouter} from 'react-router-dom';
 import logo_primary_black from "../../assets/images/logos/nucleon_logo_primary_black.png";
 
 class Dashboard extends Component {
+	
+	handleNext = () => {
+		this.props.history.push("/start");
+	}
+
 	render() {
 		return (
 			<Baseslide>
@@ -14,8 +20,6 @@ class Dashboard extends Component {
 						<div className="menu-items">
 							<ul>
 								<li>Your assessments</li>
-								<li>Your teams</li>
-								<li>Profile</li>
 								<li>Learn more</li>
 							</ul>
 							<ul className="menu-item-logout">
@@ -24,7 +28,12 @@ class Dashboard extends Component {
 						</div>
 					</div>
 					<div className="dashboard-content">
-						{this.props.children}
+						<div>
+							{this.props.children}
+						</div>
+						<div className="button-wrapper">
+							<button onClick={this.handleNext} className="new-assessment-button">New assessment</button>
+						</div>
 					</div>
 				</div>
 			</Baseslide>
@@ -32,4 +41,4 @@ class Dashboard extends Component {
 	}
 }
 
-export default Dashboard;
+export default withRouter(Dashboard);

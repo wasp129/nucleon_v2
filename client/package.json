@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@progress/kendo-drawing": "^1.5.7",
+    "@progress/kendo-react-pdf": "^2.5.0",
     "axios": "^0.18.0",
     "gsap": "^2.0.2",
     "node-sass": "^4.10.0",
@@ -11,6 +13,7 @@
     "react-radio-buttons": "^1.2.2",
     "react-rangeslider": "^2.2.0",
     "react-redux": "^5.1.1",
+    "react-responsive-modal": "^3.5.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1",
     "redux": "^4.0.1",

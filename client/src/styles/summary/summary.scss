@@ -1,0 +1,22 @@
+.summary-slide {
+    .summary {
+        .summary-end-text {
+            color: $text-color-tertiary;
+            opacity: 0.4;
+            font-size: 13px;
+            text-align: left;
+            padding: 0 30px;
+        }
+
+        button {
+            margin: 40px 20px;
+            background-color: $bg-color-primary;
+            color: $text-color-primary;
+        }
+    }
+
+    .pdf-wrapper {
+        position: absolute;
+        z-index: -999;
+    }
+}

@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
 import logo_main from "../../../assets/images/logos/nucleon_logo_primary.png"
-
 import {sendSlide1Data} from "../../../actions";
-
 import Baseslide from "../baseslide.js";
 
 class Start extends Component {

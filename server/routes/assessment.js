@@ -49,4 +49,15 @@ router.delete("/delete/:id", (req, res) => {
     })
 });
 
+router.put("/update/:id", (req, res) => {
+    console.log(req.params.id);
+    console.log(req.body.name);
+    Assessment.findByIdAndUpdate(req.params.id, {
+        $set: { name: req.body.name }
+    }, function(err, assessment) {
+            return res.json({assessment: assessment})
+        }
+    );
+});
+
 module.exports = router;

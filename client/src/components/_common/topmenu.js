@@ -38,6 +38,10 @@ class Topmenu extends Component {
         }
     }
 
+    handleBack = () => {
+        this.props.history.push("/dashboard");
+    }
+
     logout = (event) => {
         event.preventDefault()
         console.log('Logging out. Bye!')
@@ -60,7 +64,7 @@ class Topmenu extends Component {
                     <div className="menu-list-wrapper" ref={div => this.menuWrapper = div}>
                         <ul className="menu-list">
                             <li onClick={this.logout}>Log out</li>
-                            <li>Back to dashboard</li>
+                            <li onClick={this.handleBack}>Back to dashboard</li>
                         </ul>
                     </div>
                 <p className="user-logged-in" onClick={this.onClick} ref={p => this.userLoggedIn = p}>{this.props.user}<span><img ref={img => this.dropdownButton = img} className="arrow" src={arrow} alt={this.props.user}/></span></p>

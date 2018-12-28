@@ -1,0 +1,14 @@
+.end-slide {
+	color: black;
+
+	.pdf-wrapper {
+		position: absolute;
+		z-index: -1;
+	}
+
+	button {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}

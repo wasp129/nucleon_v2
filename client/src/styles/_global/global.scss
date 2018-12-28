@@ -39,6 +39,11 @@ button:focus {
     outline: 0;
 }
 
+.assessment-button {
+    color: $text-color-primary;
+    background-color: $bg-color-primary;
+}
+
 // button:hover {
 //  padding: 11px 53px;
 //  cursor: pointer;
@@ -102,6 +107,25 @@ button:focus {
 
 .input-standard:focus {
     outline: 0;
+}
+
+.assessment-edit {
+    width: 100%;
+    margin: 15px auto 26px;
+    font-size: 15px;
+}
+
+.styles_overlay__CLSq- {
+    background: rgba(0, 0, 0, 0.60);
+}
+
+.styles_modal__gNwvD {
+    padding: 20px 90px;
+
+    .assessment-headline {
+        color: black;
+        margin-bottom: 0;
+    }
 }
 
 .rangeslider-horizontal {

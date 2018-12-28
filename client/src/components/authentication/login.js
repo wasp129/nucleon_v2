@@ -35,7 +35,7 @@ class Login extends Component {
             .then(response => {
                 if (response.status === 200) {
                 	console.log("Logged in succesfully");
-                    this.props.history.push("/start")
+                    this.props.history.push("/dashboard")
                 }
             }).catch(error => {
                 console.log('login error: ' , error)
