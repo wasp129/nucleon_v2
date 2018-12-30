@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 
 
 var port = process.env.PORT || 8080;
-var db = process.env.DB_CONN;
+var db = process.env.MONGODB_URI;
 
 mongoose.Promise = global.Promise
 
@@ -49,6 +49,8 @@ app.use(passport.session())
 app.use('/user', user);		
 app.use('/assessment', assessment);		
 
+// ====SERVE BUILD FOLDER====
+app.use(express.static(path.join(__dirname, '../client/build')));
 
 app.listen(port);
 console.log(chalk.green("========== It's going down on port " + port + " =========="));
