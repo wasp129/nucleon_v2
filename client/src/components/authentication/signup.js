@@ -70,6 +70,7 @@ class Signup extends Component {
     }
 
     onClick = () => {
+        console.log("Log in clicked");
         this.child.method();
     }	
 
