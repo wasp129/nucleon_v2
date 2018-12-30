@@ -50,7 +50,7 @@ app.use('/user', user);
 app.use('/assessment', assessment);		
 
 // ====SERVE BUILD FOLDER====
-app.use(express.static(path.join(__dirname, '../client/build')));
+// app.use(express.static(path.join(__dirname, '../client/build')));
 
 app.listen(port);
 console.log(chalk.green("========== It's going down on port " + port + " =========="));
