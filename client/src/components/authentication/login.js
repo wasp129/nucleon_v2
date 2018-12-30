@@ -21,7 +21,7 @@ class Login extends Component {
 
     method = () => {
         console.log("Login clicked from LOGIN.JS");
-    	this.loginTween = new TimelineLite({ paused:true })
+    	this.loginTween = new TimelineLite()
 		.to(this.loginContainer, 0.750, { left: 0 })
     	this.loginTween.play()
     }
