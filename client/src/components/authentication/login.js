@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { TimelineLite} from "gsap/all";
+import CSSPlugin from 'gsap/CSSPlugin';
 import axios from 'axios';
 import {withRouter} from 'react-router-dom';
+
+const C = CSSPlugin; // necessary for animations to work...
 
 class Login extends Component {
 	constructor() {

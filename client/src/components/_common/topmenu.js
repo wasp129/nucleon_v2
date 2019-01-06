@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { TimelineLite } from "gsap/all";
+import CSSPlugin from 'gsap/CSSPlugin';
 import arrow from "../../assets/images/icons/down-arrow.png";
 import { withRouter } from 'react-router-dom';
+
+const C = CSSPlugin; // necessary for animations to work...
 
 class Topmenu extends Component {
     constructor() {
