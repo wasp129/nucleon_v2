@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { TimelineLite } from "gsap/all";
+import { TimelineLite, CSSPlugin } from "gsap/all";
 import arrow from "../../assets/images/icons/down-arrow.png";
 import { withRouter } from 'react-router-dom';
 
