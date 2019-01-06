@@ -67,7 +67,7 @@ class Topmenu extends Component {
                             <li onClick={this.handleBack}>Back to dashboard</li>
                         </ul>
                     </div>
-                <p className="user-logged-in" onClick={this.onClick} ref={p => this.userLoggedIn = p}>{this.props.user}<span><img ref={img => this.dropdownButton = img} className="arrow" src={arrow} alt={this.props.user}/></span></p>
+                <p className="user-logged-in" onClick={this.onClick} ref={p => this.userLoggedIn = p}>USER EXAMPLE<span><img ref={img => this.dropdownButton = img} className="arrow" src={arrow} alt={this.props.user}/></span></p>
             </div>
         );
     }

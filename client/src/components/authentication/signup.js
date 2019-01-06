@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Login from "./login";
+import Topmenu from "../_common/topmenu";
 import logo_secondary from "../../assets/images/logos/nucleon_logo_secondary.png";
 import logo_primary from "../../assets/images/logos/nucleon_logo_primary.png";
 import axios from 'axios';
@@ -81,6 +82,7 @@ class Signup extends Component {
                     <div className="signup-info">
                         <img className="logo-secondary" src={logo_secondary} alt="Nucleon"/>
                         <div className="signup-info-inner">
+                            <Topmenu/>
                             <img className="logo-primary" src={logo_primary} alt="Nucleon"/>
                             <h2>Calculate Your Team’s Performance</h2>
                             <p>The Nucleon assessment gives you an overview of what is holding back your organization’s performance. It provides a numbers-based outline of what was previously unknown — the performance of your IT department.</p>
