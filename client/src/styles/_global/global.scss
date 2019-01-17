@@ -80,6 +80,27 @@ button:focus {
             font-size: 12px;
             margin: 0 70px;
         }
+
+        @media only screen and (max-width: 420px) {
+            background-color: $bg-color-primary;
+                margin: 0 0 30px;
+                padding: 50px 0 50px;
+
+            h2 {
+                margin: 0;
+                color: $text-color-primary;
+            }
+
+            p {
+                color: $text-color-primary;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 420px) {
+        left: initial;
+        top: initial;
+        transform: translate(0,0);
     }
 }
 

@@ -17,9 +17,7 @@
             border-style: none none solid none;
 
             .input-salary {
-                width: 30%;
                 font-size: 13px;
-                /* margin-left: 20px; */
                 margin-right: 40px;
                 border: none;
                 text-align: center;
@@ -28,7 +26,6 @@
 
             .competence-wrapper {
                 display: inline;
-                margin-left: 40px;
 
                 .input-competence {
                     width: 20%;
@@ -60,6 +57,24 @@
 
         .scroll-competence {
             height: 55%;
+
+            @media only screen and (max-width: 420px) {
+                height: 45%;
+                bottom: 120px;
+            }
+        }
+
+        @media only screen and (max-width: 1005px) {
+            width: 60vw;
+        }
+
+        @media only screen and (max-width: 570px) {
+            width: 80vw;
+        }
+
+        @media only screen and (max-width: 420px) {
+            width: 100vw;
+            height: 100vh;
         }
     }
 }

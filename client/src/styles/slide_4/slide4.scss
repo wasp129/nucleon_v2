@@ -14,5 +14,18 @@
 				opacity: 0.4;
 			}
 		}
+		
+		@media only screen and (max-width: 1005px) {
+            width: 60vw;
+        }
+
+        @media only screen and (max-width: 570px) {
+            width: 80vw;
+        }
+
+        @media only screen and (max-width: 420px) {
+            width: 100vw;
+            height: 100vh;
+        }
 	}
 }

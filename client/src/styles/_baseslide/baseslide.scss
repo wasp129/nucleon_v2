@@ -89,5 +89,31 @@
 		.next-button {
 			margin-left: 30px;
 		}
+
+		@media only screen and (max-width: 650px) {
+            .back-button {
+            	margin-right: 10px;
+            }
+
+            .next-button {
+            	margin-left: 10px;
+            }
+        }
+
+        @media only screen and (max-width: 420px) {
+  			.back-button {
+  				border: 1px solid $text-color-secondary;
+  				color: $text-color-secondary;
+  			}
+
+  			.next-button {
+  				background-color: $text-color-secondary;
+  				color: $text-color-primary;
+  			}
+		}
+
+        @media only screen and (max-width: 650px) {
+            width: 286px;
+        }
 	}
 }
