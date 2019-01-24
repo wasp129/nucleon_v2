@@ -7,6 +7,26 @@
     padding: 0;
     overflow: hidden;
 
+    .burger-menu {
+        position: absolute;
+        top: 7px;
+        left: 5px;
+        cursor: pointer;
+        z-index: 5;
+
+        .line {
+            width: 35px;
+            height: 3px;
+            margin: 5px;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        @media only screen and (min-width: 966px) {
+            display: none;
+        }
+    }
+
     .menu-left {
         background-color: $bg-color-secondary;
         width: 20vw;
@@ -64,6 +84,16 @@
             bottom: 0;
             border-top: 1px solid $text-color-tertiary;
         }
+
+        @media only screen and (max-width: 965px) {
+            left: -100%;
+            width: 60vw;
+            z-index: 4;
+
+            .logo-box {
+                margin-top: 20px;
+            }
+        }
     }
 
     .dashboard-content {
@@ -100,9 +130,9 @@
                 box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
 
                 .pdf-wrapper {
-                        position: absolute;
-                        z-index: -99999;
-                    }
+                    position: absolute;
+                    z-index: -99999;
+                }
 
                 .assessment-content {
                     position: absolute;
@@ -147,6 +177,23 @@
             background-color: transparent;
             border: 1px solid $bg-color-secondary;
             color: $bg-color-secondary;
+            margin-top: 15px;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            z-index: 3;
+            display: none;
+        }
+
+        @media only screen and (max-width: 965px) {
+            width: 100vw;
+            left: 0;
         }
     }
 }

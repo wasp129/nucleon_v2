@@ -45,6 +45,10 @@
 
 	    .scroll-teamsize {
 	    	height: 43%;
+
+	    	@media only screen and (max-width: 420px) {
+  				height: 36%;
+			}
 	    }
 	}
 

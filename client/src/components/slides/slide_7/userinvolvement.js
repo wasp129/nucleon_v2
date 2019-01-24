@@ -41,30 +41,34 @@ class MethodUserInvovlement extends Component {
 				<Baseslide handleNext={this.handleNext} handleBack={this.handleBack}>
 					<div className="slide-7">
 						<div className="slide-box-main method">
-							<div className="instructions">
+							<div className="instructions method-instructions">
 								<h2>Method - User involvement</h2>
 								<p>In this section we would like to assess the agility of your team on a scale from 1-5. In doing so, we can estimate the extent to which the team benefits from agile development. For each of the categories below, please select the statement most applicable for your team.</p>
 							</div>
 							<div>
-								<div className="radio-group">
-									<p className="radio-group-statement"></p>
-									<RadioGroup onChange={value => this.handleSelect(value, this.state.methodStatements[0].id)} vertical="true">
-										<RadioButton pointColor="#5c85f1" value="1">
-											1) Requirements are handed over as formal requirement specifications from someone outside the team.
-										</RadioButton>
-										<RadioButton pointColor="#5c85f1" value="2">
-											2) Requirements are continuously prioritized in a steering committee or similar overseer.
-										</RadioButton>
-										<RadioButton pointColor="#5c85f1" value="3">
-											3) Team has a dedicated product owner proxy.
-										</RadioButton>
-										<RadioButton pointColor="#5c85f1" value="4">
-											4) Team has a dedicated product owner with extensive user/business understanding.
-										</RadioButton>
-										<RadioButton pointColor="#5c85f1" value="5">
-											5) Team and product owner get direct and continuous feedback from users on features via AB-testing or other measurable uses/feedback.
-										</RadioButton>
-									</RadioGroup>
+								<div className="scroll-wrap scroll-involvement">
+									<div className="scrollable">
+										<div className="radio-group">
+											<p className="radio-group-statement"></p>
+											<RadioGroup onChange={value => this.handleSelect(value, this.state.methodStatements[0].id)} vertical="true">
+												<RadioButton pointColor="#5c85f1" value="1">
+													1) Requirements are handed over as formal requirement specifications from someone outside the team.
+												</RadioButton>
+												<RadioButton pointColor="#5c85f1" value="2">
+													2) Requirements are continuously prioritized in a steering committee or similar overseer.
+												</RadioButton>
+												<RadioButton pointColor="#5c85f1" value="3">
+													3) Team has a dedicated product owner proxy.
+												</RadioButton>
+												<RadioButton pointColor="#5c85f1" value="4">
+													4) Team has a dedicated product owner with extensive user/business understanding.
+												</RadioButton>
+												<RadioButton pointColor="#5c85f1" value="5">
+													5) Team and product owner get direct and continuous feedback from users on features via AB-testing or other measurable uses/feedback.
+												</RadioButton>
+											</RadioGroup>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>

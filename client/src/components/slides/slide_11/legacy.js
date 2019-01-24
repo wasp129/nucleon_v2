@@ -61,7 +61,7 @@ class Legacy extends Component {
 			<Baseslide handleNext={this.handleNext} handleBack={this.handleBack}>
 				<div className="slide-11">
 					<div className="slide-box-main legacy">
-						<div className="instructions">
+						<div className="instructions legacy-instructions">
 							<h2>Legacy</h2>
 							<p>In your opinion, what share of your team's systems are state of the art, and have strategic value for the businesses future development?</p>
 						</div>

@@ -1,5 +1,22 @@
 .slide-11 {
     .legacy {
+
+        .legacy-instructions {
+            @media only screen and (max-width: 440px) {
+                background-color: $bg-color-primary;
+                margin: 0 0 30px;
+                padding: 50px 0 50px;
+
+                h2 {
+                    margin: 0;
+                    color: $text-color-primary;
+                }
+
+                p {
+                    color: $text-color-primary;
+                }
+            }
+        }
         .slide-wrapper {
             margin: 50px 0 0 0;
 
@@ -53,6 +70,22 @@
                     }
                 }
             }
+        }
+
+        @media only screen and (max-width: 1005px) {
+            width: 60vw;
+        }
+
+        @media only screen and (max-width: 590px) {
+            width: 80vw;
+        }
+
+        @media only screen and (max-width: 440px) {
+            width: 100vw;
+            height: 100vh;
+            top: initial;
+            left: initial;
+            transform: translate(0,0);
         }
     }
 }

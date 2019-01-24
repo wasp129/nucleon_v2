@@ -1,9 +1,76 @@
 .slide-7 {
     .method {
-    	width: 65vw;
+        width: 65vw;
+
+        .instructions {
+            p {
+                margin: 0 50px;
+            }
+        }
+
+        .method-instructions {
+            @media only screen and (max-width: 580px) {
+                background-color: $bg-color-primary;
+                margin: 0 0 30px;
+                padding: 50px 0 50px;
+
+                h2 {
+                    margin: 0;
+                    color: $text-color-primary;
+                }
+
+                p {
+                    color: $text-color-primary;
+                }
+            }
+        }
+
+        .scroll-involvement {
+            height: 70%;
+
+            .radio-group {
+                width: 100%;
+                margin: 0 auto 55px;
+
+                .radio-group-statement {
+                    color: $text-color-tertiary;
+                    font-size: 12px;
+                    margin-bottom: 25px;
+                }
+
+                div {
+                    text-align: left;
+                    width: 95%;
+                    margin: 0 auto;
+
+                    div {
+                        border-right: 0 !important;
+                        border-top: 0 !important;
+                        border-left: 0 !important;
+                        margin-bottom: 15px !important;
+                        padding: 0 16px !important;
+
+                        div {
+                            div:nth-child(2) {
+                                display: none !important;
+                            }
+                        }
+                    }
+                }
+            }
+
+            @media only screen and (max-width: 1005px) {
+                height: 60%;
+            }
+
+            @media only screen and (max-width: 645px) {
+                height: 40%;
+                bottom: 140px;
+            }
+        }
 
         .radio-group {
-            width: 90%;
+            width: 100%;
             margin: 0 auto 55px;
 
             .radio-group-statement {
@@ -21,6 +88,8 @@
                     border-right: 0 !important;
                     border-top: 0 !important;
                     border-left: 0 !important;
+                    margin-bottom: 15px !important;
+                    padding: 0 16px !important;
 
                     div {
                         div:nth-child(2) {
@@ -29,6 +98,22 @@
                     }
                 }
             }
+        }
+
+        @media only screen and (max-width: 1005px) {
+            width: 60vw;
+        }
+
+        @media only screen and (max-width: 775px) {
+            width: 80vw;
+        }
+
+        @media only screen and (max-width: 580px) {
+            width: 100vw;
+            height: 100vh;
+            left: initial;
+            top: initial;
+            transform: translate(0,0);
         }
     }
 }

@@ -5,6 +5,11 @@
         .scroll-culture {
             height: 65%;
             bottom: 40px;
+
+            @media only screen and (max-width: 420px) {
+                height: 55%;
+                bottom: 110px;
+            }    
         }
 
         .radio-group {
@@ -26,9 +31,8 @@
                 -webkit-box-align: center;
                 align-items: center;
                 justify-content: center;
-                padding: 0 10px !important;
+                padding: 0 6px !important;
                 height: 50px;
-                // font-size: 12px;
 
                 div {
                     border-right: 0 !important;
@@ -41,7 +45,26 @@
                         }
                     }
                 }
+
+                @media only screen and (max-width: 1005px) {
+                    flex-direction: column;
+                    height: 300px;
+                    width: 100%;
+                }
             }
+        }
+
+        @media only screen and (max-width: 1005px) {
+            width: 60vw;
+        }
+
+        @media only screen and (max-width: 570px) {
+            width: 80vw;
+        }
+
+        @media only screen and (max-width: 420px) {
+            width: 100vw;
+            height: 100vh;
         }
     }
 

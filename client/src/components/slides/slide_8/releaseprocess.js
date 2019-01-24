@@ -46,7 +46,7 @@ class MethodReleaseProcess extends Component {
 				<Baseslide handleNext={this.handleNext} handleBack={this.handleBack}>
 					<div className="slide-7">
 						<div className="slide-box-main method">
-							<div className="instructions">
+							<div className="instructions method-instructions">
 								<h2>Method - Release process</h2>
 								<p>In this section we would like to assess the agility of your team on a scale from 1-5. In doing so, we can estimate the extent to which the team benefits from agile development. For each of the categories below, please select the statement most applicable for your team.</p>
 							</div>
